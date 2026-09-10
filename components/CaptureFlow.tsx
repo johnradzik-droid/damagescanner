@@ -251,7 +251,7 @@ export function CaptureFlow({ id }: { id: string }) {
                 <div className="relative aspect-square bg-black/40">
                   {item.imageDataUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={item.imageDataUrl} alt={item.label} className="size-full object-cover" />
+                    <img src={item.imageDataUrl} alt={item.label} className="size-full object-contain bg-black" />
                   ) : (
                     <div className="flex size-full items-center justify-center px-1 text-center text-[11px] font-bold uppercase tracking-wide text-muted">
                       {item.skipped ? "Skipped" : "Needed"}
