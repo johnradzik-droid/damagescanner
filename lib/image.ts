@@ -1,5 +1,5 @@
-const MAX_EDGE = 1280;
-const JPEG_QUALITY = 0.82;
+const MAX_EDGE = 1024;
+const JPEG_QUALITY = 0.76;
 
 function canvasToJpeg(canvas: HTMLCanvasElement): string {
   return canvas.toDataURL("image/jpeg", JPEG_QUALITY);

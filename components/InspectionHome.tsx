@@ -13,9 +13,13 @@ export function InspectionHome() {
 
   useEffect(() => {
     let cancelled = false;
-    listInspections().then((data) => {
-      if (!cancelled) setRows(data);
-    });
+    listInspections()
+      .then((data) => {
+        if (!cancelled) setRows(data);
+      })
+      .catch(() => {
+        if (!cancelled) setRows([]);
+      });
     return () => {
       cancelled = true;
     };
